@@ -59,9 +59,10 @@ form {
   background: #FEFAC0;
 }
 
-.sidebar div {
-  margin: 15px;
+.sidebar div, .main div {
+  margin: 10px 15px;
 }
+
 
 .flexbox {
   display: flex;
