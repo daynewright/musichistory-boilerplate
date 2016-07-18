@@ -41,7 +41,6 @@ select {
 }
 
 label {
-  display: block;
   margin-top: 5px;
 }
 
@@ -66,14 +65,32 @@ form {
 
 .flexbox {
   display: flex;
+}
+
+.wrap-space-between {
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
+/*.hidden {
+  display: none;
+}*/
 
+.add-music {
+  justify-content: center;
+}
 
+.music-form {
+  text-align: center;
+}
+
+.music-form label {
+  margin-right: 10px;
+}
+
+/* Large screen modifications */
 @media (min-width: 768px) {
-  .flexbox {
+  .reverse {
     flex-direction: row-reverse;
   }
 
