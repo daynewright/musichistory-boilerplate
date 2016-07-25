@@ -6,21 +6,30 @@ function getArtist() {
     albumHTML = '<option value="" disabled selected>Options</option>';
     switch(artist.value) {
         case 'Gregory Alan Isakov':
-            albumHTML += '<option value="The Weatherman">The Weatherman</option> <option value="This Empty Northern Hemisphere"> This Empty Northern Hemisphere </option> <option value="That Sea, The Gambler"> That Sea, The Gambler </option> <option value="Songs for October"> Songs for October </option>';
+            albumHTML += addOptions(['The Weatherman','This Empty Northern Hemisphere','That Sea, The Gambler','Songs for October']);
             break;
         case 'Dan Wilson':
-            albumHTML += '<option value="Love Without Fear">Love Without Fear</option> <option value="Live At the Pantages">Live At the Pantages</option> <option value="Free Life">Free Life</option> <option value="Disappearing">Disappearing</option> <option value="Be Free EP"> Damien Jurado </option>';
+            albumHTML += addOptions(['Love Without Fear','Live At the Pantages','Free Life','Disappearing','Be Free EP']);
             break;
         case 'Emerson Hart':
-            albumHTML += '<option value="Beauty in Disrepair">Beauty in Disrepair</option> <option value="Cigarettes and Gasoline">Cigarettes and Gasoline</option>';
+            albumHTML += addOptions(['Beauty in Disrepair','Cigarettes and Gasoline']);
             break;
         case 'Willy Tea Taylor':
-            albumHTML += '<option value="Knuckleball Prime">Knuckleball Prime</option> <option value="Color This Album">Color This Album</option> <option value="4 Strings">4 Strings</option>';
+            albumHTML += addOptions(['Knuckleball Prime','Color This Album','4 Strings']);
             break;
         case 'Damien Jurado':
-            albumHTML += '<option value="Visions of Us on the Land">Visions of Us on the Land</option> <option value="Brothers and Sisters of the External Son">Brothers and Sisters of the External Son </option> <option value="Maraqopa">Maraqopa</option> <option value="Live at Landlocked">Live at Landlocked</option> <option value="Saint Barlett">Saint Barlett</option>';
+            albumHTML += addOptions(['Visions of Us on the Land','Brothers and Sisters of the External Son','Maraqopa','Live at Landlocked','Saint Barlett']);
             break;
     }
     document.getElementsByTagName('select')[1].innerHTML = albumHTML;
 }
 artist.addEventListener('change', getArtist);
+
+//option helper function
+function addOptions(valueArray){
+  var holder = '';
+    valueArray.forEach(function(e){
+        holder += `<option value="${e}">${e}</option>`;
+    });
+  return holder;
+}

@@ -18,6 +18,10 @@ nav, section {
   margin: 0;
 }
 
+p {
+  color: #000;
+}
+
 section {
   min-height: 150px;
   width: 100%;
@@ -70,6 +74,13 @@ form {
   justify-content: space-between;
 }
 
+.hidden {
+  display: none;
+}
+
+.add-music {
+  justify-content: center;
+}
 
 
 @media (min-width: 768px) {
