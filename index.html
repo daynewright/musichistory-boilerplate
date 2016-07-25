@@ -24,11 +24,11 @@
             </ul>
         </nav>
         <div class="flexbox wrap-space-between reverse">
-            <section class="main hidden">
+            <section class="main">
                 <div></div>
             </section>
 
-            <section class="sidebar hidden">
+            <section class="sidebar">
                 <div>
                     <form class="" action="index.html" method="post">
                         <label>Song length:</label>
@@ -46,13 +46,12 @@
                         <select name="album">
                             <option value="" disabled selected>Options</option>
                         </select>
-                        <label for="genre">Genre:</label>
+                        <label for="genre">Genre</label>
                     </form>
                 </div>
-
             </section>
             <!-- SPA add music page -->
-            <section class="add-music">
+            <section class="add-music hidden">
                 <div class="music-form">
                     <label for="song-name">Song Name:<input type="text" name="song-name" value=""></label>
                     <label for="artist">Artist:<input type="text" name="artist" value=""></label>
@@ -62,7 +61,6 @@
 
             <!-- SPA profile page -->
             <section class="profile hidden"></section>
-
         </div>
         <script src="music.js"></script>
         <script src="songs.js"></script>

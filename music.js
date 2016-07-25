@@ -29,7 +29,7 @@ artist.addEventListener('change', getArtist);
 function addOptions(valueArray){
   var holder = '';
     valueArray.forEach(function(e){
-        holder += '<option value="'+ e +'">'+ e + '</option>';
+        holder += `<option value="${e}">${e}</option>`;
     });
   return holder;
 }
