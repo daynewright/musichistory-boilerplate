@@ -44,7 +44,31 @@ select {
   max-width: 200px;
 }
 
+input {
+  padding: 3px;
+  border: 2px solid #000;
+  width: 50%;
+}
+
 label {
+  width:100px;
+  clear:left;
+  text-align:left;
+  margin-top: 5px;
+}
+
+input, label {
+  float:left;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #e6e6e6;
+  font-weight: 900;
+  border-radius: 2px;
+  border: 1px solid #000;
+  padding: 5px 35px;
+  cursor: pointer;
   margin-top: 5px;
 }
 
@@ -86,10 +110,17 @@ form {
 
 .music-form {
   text-align: center;
+  border: none;
+  display: flex;
+  justify-content: center;
 }
 
 .music-form label {
   margin-right: 10px;
+}
+
+.music-form div{
+  width: 50%;
 }
 
 /* Large screen modifications */
