@@ -36,4 +36,6 @@ var Music = (function(music){
     return holder;
   }
 
+  return music;
+
 })(Music || {})
