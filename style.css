@@ -94,13 +94,27 @@ button:hover {
   background-color: #fff;
 }
 
+#more-songs {
+  margin: 0 auto;
+  padding: 5px 10%;
+  display: block;
+}
+
+.main-div {
+  min-height: 70%;
+}
+
+.more {
+  width: 90%;
+}
+
 .song button {
   padding: 5px 5px;
   margin-left: 20px;
   font-size: .5em;
 }
 
-.music-form button {
+#add-music-btn {
   padding: 5px 35px;
   margin-top: 10px;
   margin-left: -134px;
