@@ -1,8 +1,9 @@
 var Music = (function(music){
 
+  //add selections to sidebar //
   (function(){
     var artist = document.getElementsByTagName('select')[0];
-    var button = document.querySelector('button');
+    var button = document.querySelector('.music-form button');
     var albumHTML = '';
 
     function getArtist() {
@@ -32,9 +33,8 @@ var Music = (function(music){
       var songName = document.querySelector('input[name="song-name"]').value;
       var songArtist = document.querySelector('input[name="artist"]').value;
       var songAlbum = document.querySelector('input[name="album"]').value;
-
+      debugger;
       music.addAnotherSong(songName, songArtist, songAlbum);
-      addSongsToDOM();
     }
 
     artist.addEventListener('change', getArtist);
@@ -49,14 +49,20 @@ var Music = (function(music){
       return holder;
     }
   })()
+  // END add selections to sidebar //
 
-  addSongsToDOM();
+  var songHolder = document.getElementsByClassName('main')[0].firstElementChild;
 
-  //add songs to DOM main section
-  function addSongsToDOM(){
-    var songHolder = document.getElementsByClassName('main')[0].firstElementChild;
-    songHolder.innerHTML = '';
-    music.allSongs().forEach(e => songHolder.innerHTML += `<h2>${e[0]}</h2><p>${e[1]}</p>`);
+  music.addSongsToDOM = function(songs){
+      console.log(songs);
+      songs.forEach(e => songHolder.innerHTML += `
+          <div class="song">
+            <h2>${e.song}</h2>
+            <button type="button">Delete</button>
+            <p>
+              <span>${e.artist}</span>|<span>${e.album}</span>|<span>Genre</span>
+            </p>
+          </div>`);
   }
 
   return music;
