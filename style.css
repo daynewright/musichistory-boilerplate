@@ -104,10 +104,6 @@ button:hover {
   min-height: 70%;
 }
 
-.more {
-  width: 90%;
-}
-
 .song button {
   padding: 5px 5px;
   margin-left: 20px;
@@ -137,7 +133,6 @@ form {
 .sidebar div, .main div {
   margin: 10px 25px;
 }
-
 
 .flexbox {
   display: flex;
@@ -169,6 +164,10 @@ form {
 
 .music-form div{
   width: 50%;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 /* Large screen modifications */

@@ -53,6 +53,10 @@ var Music = (function(music){
         if(evt.target.id === 'del-btn'){
           deleteSong(evt);
         }
+        if(evt.target.id === 'more-songs'){
+          music.loadSongs('songs2.json');
+          evt.target.disabled = true;
+        }
       }
 
       //option helper function
