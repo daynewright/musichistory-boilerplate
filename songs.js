@@ -6,8 +6,8 @@ var Music = (function(music){
     music.loadSongs = (function() {
       var xhr = new XMLHttpRequest()
       xhr.addEventListener("load",function(){
-        data = JSON.parse(xhr.responseText);
-        music.addSongsToDOM(data);
+        songs = songs.concat(JSON.parse(xhr.responseText));
+        music.addSongsToDOM(songs);
       })
 
       xhr.open("GET","songs.json")
