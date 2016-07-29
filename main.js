@@ -28,7 +28,7 @@ var Music = (function(music){
         document.getElementsByTagName('select')[1].innerHTML = albumHTML;
     }
 
-    function addAnotherSong(){
+    function addAnotherSongClick(){
       var songName = document.querySelector('input[name="song-name"]').value;
       var songArtist = document.querySelector('input[name="artist"]').value;
       var songAlbum = document.querySelector('input[name="album"]').value;
@@ -38,7 +38,7 @@ var Music = (function(music){
     }
 
     artist.addEventListener('change', getArtist);
-    button.addEventListener('click', addAnotherSong);
+    button.addEventListener('click', addAnotherSongClick);
 
     //option helper function
     function addOptions(valueArray){

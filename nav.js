@@ -2,8 +2,6 @@
 
   showPage(location.hash);
 
-  // You can nest IIFES for additional segmentation
-  // and also name IIFEs for additional context
   (function addNavLinkEvents () {
     var navLinks = document.querySelectorAll('li');
     for (var i = 0; i < navLinks.length; i++) {
