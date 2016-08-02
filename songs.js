@@ -28,9 +28,9 @@ var Music = (function(music){
 
       music.addSongsToDOM(music.getAllSongs());
 
-      document.querySelector('input[name="song-name"]').value = '';
-      document.querySelector('input[name="artist"]').value = '';
-      document.querySelector('input[name="album"]').value = '';
+      $('input[name="song-name"]').val('');
+      $('input[name="artist"]').val('');
+      $('input[name="album"]').val('');
     }
 
     return music;

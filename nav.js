@@ -3,17 +3,17 @@
   showPage(location.hash);
 
   (function addNavLinkEvents () {
-    var navLinks = document.querySelectorAll('li');
+    var navLinks = $('li');
     for (var i = 0; i < navLinks.length; i++) {
-      navLinks[i].addEventListener('click', clickedNavLink);
+      $(navLinks[i]).click(clickedNavLink);
     }
   }())
 
   function clickedNavLink (evt) {
-    var pages = document.querySelectorAll('.page');
+    var pages = $('.page');
 
     for (var i = 0; i < pages.length; i++) {
-      pages[i].classList.add('hidden');
+      $(pages[i]).addClass('hidden');
     }
 
     showPage(evt.target.hash);
@@ -21,13 +21,13 @@
 
   function showPage (id) {
     if (id) {
-      document.querySelector(id).classList.remove('hidden');
-      document.querySelector(`a[href="${id}"]`).parentNode.innerHTML = 'Add Music';
-      document.querySelector('li').innerHTML = '<a href="#">List Music</a>'
+      $(id).removeClass('hidden');
+      $(`a[href="${id}"]`).parent().html('Add Music');
+      $($('li')[0]).html('<a href="#">List Music</a>');
     } else {
-      document.querySelector('#home').classList.remove('hidden');
-      document.querySelector('li').innerHTML = 'List Music';
-      document.querySelector('li:last-of-type').innerHTML = '<a href="#add-music">Add Music</a>';
+      $('#home').removeClass('hidden');
+      $('li').html('List Music');
+      $('li:last-of-type').html('<a href="#add-music">Add Music</a>');
     }
   }
 
