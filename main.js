@@ -70,10 +70,10 @@ var Music = (function(music){
     })()
 // END add selections to sidebar //
 
-  var songHolder = document.getElementsByClassName('main')[0].firstElementChild;
+  var songHolder =$('.main').children()[0];
 
   music.addSongsToDOM = function(songs){
-    songHolder.innerHTML = '';
+    songHolder.innerHTML= '';
     songs.forEach((e,i) => songHolder.innerHTML += (`
         <div id="${i}"class="song">
           <h2>${e.song}</h2>
