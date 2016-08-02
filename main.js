@@ -42,9 +42,11 @@ var Music = (function(music){
         music.addSongsToDOM(music.getAllSongs());
       }
 
-      artist.addEventListener('change', getArtist);
+      //artist.addEventListener('change', getArtist);
+     $(artist).change(getArtist);
 
-      document.querySelector("body").addEventListener("click", eventListenerCallBack);
+     //  document.querySelector("body").addEventListener("click", eventListenerCallBack);
+      $("body").click(eventListenerCallBack);
 
       function eventListenerCallBack(evt){
         if(evt.target.id === 'add-music-btn'){
@@ -73,7 +75,7 @@ var Music = (function(music){
   var songHolder =$('.main').children()[0];
 
   music.addSongsToDOM = function(songs){
-    songHolder.innerHTML= '';
+   $(songHolder).html('');
     songs.forEach((e,i) => songHolder.innerHTML += (`
         <div id="${i}"class="song">
           <h2>${e.song}</h2>
