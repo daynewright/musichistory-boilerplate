@@ -3,15 +3,14 @@ var Music = (function(music){
     var songs = [];
 
     // Load JSON data on load
-    music.loadSongs = function(json) {
-      var xhr = new XMLHttpRequest()
-      xhr.addEventListener("load",function(){
-        songs = songs.concat(JSON.parse(xhr.responseText));
-        music.addSongsToDOM(songs);
-      })
-
-      xhr.open("GET", json);
-      xhr.send();
+    music.loadSongs = function (url) {
+        return $.getJSON(url)
+            .then(function (JSONsongs) {
+              return songs = songs.concat(JSONsongs);
+            })
+            .then(function (JSONsongs) {
+              music.addSongsToDOM(JSONsongs);
+            });
     }
 
     music.loadSongs('songs1.json');
