@@ -2,8 +2,8 @@ var Music = (function(music){
 
 //add selections to sidebar //
     (function(){
-      var artist = document.getElementsByTagName('select')[0];
-      var button = document.querySelector('.music-form button');
+      var artist = $('select')[0];
+      var button = $('.music-form button');
       var albumHTML = '';
 
       function getArtist() {
@@ -26,13 +26,13 @@ var Music = (function(music){
                   albumHTML += addOptions(['Visions of Us on the Land','Brothers and Sisters of the External Son','Maraqopa','Live at Landlocked','Saint Barlett']);
                   break;
           }
-          document.getElementsByTagName('select')[1].innerHTML = albumHTML;
+         $ ($('select')[1]).html(albumHTML);
       }
 
       function addAnotherSongClick(){
-        var songName = document.querySelector('input[name="song-name"]').value;
-        var songArtist = document.querySelector('input[name="artist"]').value;
-        var songAlbum = document.querySelector('input[name="album"]').value;
+        var songName = $('input[name="song-name"]').val();
+        var songArtist = $('input[name="artist"]').val();
+        var songAlbum = $('input[name="album"]').val();
 
         music.addAnotherSong(songName, songArtist, songAlbum);
       }
